@@ -17,6 +17,6 @@ jobs:
             cd ParallelsDesktopCrack 
             git checkout remotes/origin/main
           
-            git push https://${{secrets.GITHUB_TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git
+            git push https://${{secrets.GITHUB_TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git HEAD:main --force
         
         
