@@ -16,7 +16,11 @@ jobs:
             git clone https://notabug.org/somebasj/ParallelsDesktopCrack.git 
             cd ParallelsDesktopCrack 
             git checkout remotes/origin/main
+      - name: setRemote
+        run: |
             git remote set-url main https://github.com/dreamncn/ParallelsDesktopCrack
+      - name: push
+        run: |     
             git push https://${{secrets.GITHUB_TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git
         
         
