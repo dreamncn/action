@@ -4,19 +4,18 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '10 0/2 * * *'
+    - cron: '0 0/12 * * *'
 
 jobs:
   ParallelsDesktopCrack:
     name: ParallelsDesktopCrack
     runs-on: ubuntu-latest
     steps:
-      - name: clone remote git
+      - name: ParallelsDesktopCrack
         run: |
             git clone https://notabug.org/somebasj/ParallelsDesktopCrack.git 
             cd ParallelsDesktopCrack 
             git checkout remotes/origin/main
-          
             git push https://${{secrets.TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git HEAD:main --force
         
         
