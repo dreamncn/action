@@ -1,0 +1,20 @@
+name:  ParallelsDesktopCrack
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '10 0/2 * * *'
+
+jobs:
+  clean:
+    name: Clean
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone remote git
+        run: |
+            git clone https://notabug.org/somebasj/ParallelsDesktopCrack.git 
+            cd ParallelsDesktopCrack \
+            git push https://${{secrets.GITHUB_TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git
+        
+        
