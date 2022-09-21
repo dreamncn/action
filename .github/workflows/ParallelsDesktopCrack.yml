@@ -14,7 +14,7 @@ jobs:
       - name: clone remote git
         run: |
             git clone https://notabug.org/somebasj/ParallelsDesktopCrack.git 
-            cd ParallelsDesktopCrack \
+            cd ParallelsDesktopCrack 
             git push https://${{secrets.GITHUB_TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git
         
         
