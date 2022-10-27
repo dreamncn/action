@@ -8,7 +8,7 @@ on:
 
 jobs:
   ParallelsDesktopCrack:
-    name: ParallelsDesktopCrack
+    name: ParallelsDesktop
     runs-on: ubuntu-latest
     steps:
       - name: ParallelsDesktopCrack
@@ -17,5 +17,11 @@ jobs:
             cd ParallelsDesktopCrack 
             git checkout remotes/origin/main
             git push https://${{secrets.TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git HEAD:main --force
+      - name: ParallelsToolboxCrack
+        run: |
+            git clone https://git.icrack.day/somebasj/ParallelsToolboxCrack.git 
+            cd ParallelsToolboxCrack 
+            git checkout remotes/origin/main
+            git push https://${{secrets.TOKEN}}@github.com/dreamncn/ParallelsToolboxCrack.git HEAD:main --force       
         
         
