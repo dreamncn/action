@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: ParallelsDesktopCrack
         run: |
-            git clone https://notabug.org/somebasj/ParallelsDesktopCrack.git 
+            git clone https://git.icrack.day/somebasj/ParallelsDesktopCrack.git 
             cd ParallelsDesktopCrack 
             git checkout remotes/origin/main
             git push https://${{secrets.TOKEN}}@github.com/dreamncn/ParallelsDesktopCrack.git HEAD:main --force
